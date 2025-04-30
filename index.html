@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benvenuti nel progetto Ainana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      opacity: 0.1;
+      animation: moveStars 60s linear infinite;
+    }
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      border-right: .15em solid white;
+      white-space: nowrap;
+      animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
+    .pineapple {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+    .scroll-text {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .arrow {
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    .section {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      text-align: left;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: black;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .disclaimer {
+      font-size: 0.9rem;
+      color: #333;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      margin-top: 2rem;
+    }
+    .button-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+    .button-link:hover {
+      background-color: #333;
+      color: white;
+      box-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="hero">
+    <img src="ananas.gif" alt="ananas" class="pineapple" />
+    <div class="typewriter">Benvenuti nel progetto Ainana</div>
+    <div class="scroll-text">Scorri verso il basso</div>
+    <div class="arrow">&#x2193;</div>
+  </div>
+
+  <div class="section">
+    <h2>Il progetto</h2>
+    <p><strong>Ainana è un progetto indipendente rivolto ai più influenti professionisti della nutrizione a livello internazionale.</strong></p>
+    <p>Se state leggendo questo messaggio, è perché avete ricevuto una nostra lettera numerata: un invito riservato a chi è pronto a ridefinire gli standard del proprio settore.</p>
+    <p>L’esperienza a cui accederete è <strong>personale, gratuita e su invito.</strong></p>
+    <p>Il progetto è sviluppato con il contributo di esperti in strategia e innovazione della <strong>SDA Bocconi School of Management</strong>, con l’obiettivo di <strong>connettere e valorizzare figure chiave della nutrizione</strong> che desiderano generare impatto concreto.</p>
+  </div>
+
+  <div class="section">
+    <h2>Sicurezza e integrità</h2>
+    <p class="disclaimer">
+      Tutti i contenuti sono stati verificati per garantire affidabilità, sicurezza e compatibilità con i principali dispositivi. L’esperienza non richiede l’installazione di app né la condivisione di dati sensibili. Ainana promuove un’interazione digitale riservata, conforme alle buone pratiche in materia di privacy e sicurezza.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Non riesci ad accedere dalla lettera?</h2>
+    <p>Se il tuo smartphone non reagisce avvicinandolo al punto indicato nella busta, puoi accedere all’esperienza anche da qui:</p>
+    <a href="https://invito-numero-due.vercel.app" class="button-link">Accedi con il tuo invito</a>
+  </div>
+</body>
+</html>
