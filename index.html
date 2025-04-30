@@ -6,6 +6,9 @@
   <title>Benvenuti nel progetto Ainana</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       background: radial-gradient(circle at center, #111 0%, #000 100%);
       color: white;
@@ -32,7 +35,7 @@
       to { background-position: 1000px 1000px; }
     }
     .hero {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -45,8 +48,9 @@
       border-right: .15em solid white;
       white-space: nowrap;
       animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-top: 1rem;
+      max-width: 90vw;
     }
     @keyframes typing {
       from { width: 0 }
@@ -57,16 +61,16 @@
       50% { border-color: white; }
     }
     .pineapple {
-      width: 100px;
+      width: 80px;
       margin-bottom: 1rem;
     }
     .scroll-text {
       margin-top: 2rem;
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #ccc;
     }
     .arrow {
-      font-size: 2rem;
+      font-size: 1.5rem;
       animation: bounce 2s infinite;
     }
     @keyframes bounce {
@@ -74,9 +78,9 @@
       50% { transform: translateY(10px); }
     }
     .section {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 2rem;
+      max-width: 90vw;
+      margin: 1.5rem auto;
+      padding: 1.5rem;
       background-color: white;
       color: black;
       border-radius: 20px;
@@ -84,15 +88,16 @@
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
     }
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       margin-bottom: 1rem;
       color: black;
     }
     p {
+      font-size: 0.95rem;
       margin-bottom: 1rem;
     }
     .disclaimer {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #333;
       border-top: 1px solid #ccc;
       padding-top: 1rem;
@@ -109,6 +114,7 @@
       font-weight: 600;
       transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
       box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+      font-size: 0.95rem;
     }
     .button-link:hover {
       background-color: #333;
